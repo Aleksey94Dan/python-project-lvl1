@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Aleksey94Dan_brain_games"
-version = "1.3.1"
+version = "1.5.1"
 description = ""
 authors = ["Aleksey Danilchenko <danilchenko.aleksey94@gmail.com>"]
 packages = [{ include = "brain_games"}]
@@ -13,7 +13,7 @@ prompt = "^0.4.1"
 flake8 = "^3.7"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games1:main"
+brain-games = "brain_games.scripts.brain_games:main"
 
 [[tool.poetry.source]]
 name = "test"

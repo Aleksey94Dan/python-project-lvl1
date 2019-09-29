@@ -10,6 +10,9 @@ END = 100
 # Possible responses to user response
 R_RIGHT = 'Correct!'
 
+# Attempts
+ATTEMPTS = 3
+
 
 def gen_question():
     return randint(START, END)
@@ -35,28 +38,42 @@ def is_even(data):
 def check(answer, name, data):
     even = is_even(data)
     if even and answer == 'yes':
-        return print(R_RIGHT)
+        return R_RIGHT
     elif not even and answer == 'no':
-        return print(R_RIGHT)
+        return R_RIGHT
     elif even and answer == 'no':
-        return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!")
+        return f"'{answer}' is wrong answer " \
+               f";(. Correct answer was 'yes'. Let's try again, {name}!"
     elif not even and answer == 'yes':
-        return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!")
+        return f"'{answer}' is wrong answer " \
+               f";(. Correct answer was 'no'. Let's try again, {name}!"
     elif even and (answer != 'no' or answer != 'yes'):
-        return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, {name}!")
+        return f"'{answer}' is wrong answer ;" \
+               f"(. Correct answer was 'yes'. Let's try again, {name}!"
     elif not even and (answer != 'no' or answer != 'yes'):
-        return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'. Let's try again, {name}!")
+        return f"'{answer}' is wrong answer ;" \
+               f"(. Correct answer was 'no'. Let's try again, {name}!"
 
 
-def main():
+def point(attempt, name):
     i = 0
     while True:
         data = gen_question()
         ask(data)
-        check(reply(), 'Bill', data)
-        i += 1
-        if i == 10:
+        r = check(reply(), name, data)
+        if r == R_RIGHT:
+            print(r)
+            i += 1
+        else:
+            i = 0
+            print(r)
+        if i == attempt:
+            print(f'Congratulations, {name}!')
             break
+
+
+def main():
+    point(ATTEMPTS, 'Bill')
 
 
 if __name__ == '__main__':

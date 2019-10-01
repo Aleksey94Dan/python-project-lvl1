@@ -2,8 +2,8 @@
 
 from .brain_games import out_text
 from brain_games.rule import rule
-from brain_games.cli import run
-from brain_games.logic import point, ATTEMPTS, ask
+# from brain_games.cli import run
+# from brain_games.logic import point, ATTEMPTS, ask
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
     rule()
     print()
 
-    name = run()
+    # name = run()
 
 
 if __name__ == '__main__':

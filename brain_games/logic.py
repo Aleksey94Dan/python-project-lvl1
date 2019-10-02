@@ -6,10 +6,6 @@ import prompt
 START = 1
 END = 100
 
-
-# Possible responses to user response
-R_RIGHT = 'Correct!'
-
 # Attempts
 ATTEMPTS = 3
 
@@ -19,8 +15,14 @@ def gen_question():
 
 
 def ask(data):
-    arg = data
-    print(f'Question: {arg}')
+    print(f'Question: {data}')
+
+
+def respond(answer, ans, name):
+    if ans:
+        return 'Correct!'
+    return f"'{answer}' is wrong answer " \
+        f";(. Correct answer was '{ans}'. Let's try again, {name}!"
 
 
 def reply():
@@ -31,28 +33,16 @@ def reply():
 def is_even(data):
     arg = data
     if arg % 2 == 0:
-        return True
-    return False
+        return True, 'Yes'
+    return False, 'No'
 
 
 def check(answer, name, data):
     even = is_even(data)
-    if even and answer == 'yes':
-        return R_RIGHT
-    elif not even and answer == 'no':
-        return R_RIGHT
-    elif even and answer == 'no':
-        return f"'{answer}' is wrong answer " \
-               f";(. Correct answer was 'yes'. Let's try again, {name}!"
-    elif not even and answer == 'yes':
-        return f"'{answer}' is wrong answer " \
-               f";(. Correct answer was 'no'. Let's try again, {name}!"
-    elif even and (answer != 'no' or answer != 'yes'):
-        return f"'{answer}' is wrong answer ;" \
-               f"(. Correct answer was 'yes'. Let's try again, {name}!"
-    elif not even and (answer != 'no' or answer != 'yes'):
-        return f"'{answer}' is wrong answer ;" \
-               f"(. Correct answer was 'no'. Let's try again, {name}!"
+    if answer in data:
+        return respond(answer, even[1], name)
+    else:
+        return respond(answer, even[1], name)
 
 
 def point(attempt, name):

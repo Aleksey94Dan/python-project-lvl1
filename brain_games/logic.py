@@ -10,6 +10,22 @@ END = 100
 ATTEMPTS = 3
 
 
+def gen_examaple():
+    arg1 = randint(START, END)
+    arg2 = randint(START, END)
+    arg3 = randint(START, END)
+    arg4 = randint(START, END)
+    arg5 = randint(START, END)
+    arg6 = randint(START, END)
+    return ((f'{arg1} + {arg2}', arg1 + arg2),
+            (f'{arg3} + {arg4}', arg3 + arg4),
+            (f'{arg5} + {arg6}', arg5 + arg6),)
+
+
+def happy(name):
+    return print(f'Congratulations, {name}!')
+
+
 def gen_question():
     return randint(START, END)
 
@@ -18,8 +34,8 @@ def ask(data):
     print(f'Question: {data}')
 
 
-def respond(answer, ans, name):
-    if ans:
+def respond(answer, ans, name, switch=0):
+    if ans and switch == 1:
         return 'Correct!'
     return f"'{answer}' is wrong answer " \
         f";(. Correct answer was '{ans}'. Let's try again, {name}!"
@@ -39,8 +55,8 @@ def is_even(data):
 
 def check(answer, name, data):
     even = is_even(data)
-    if answer in data:
-        return respond(answer, even[1], name)
+    if answer in even:
+        return respond(answer, even[1], name, 1)
     else:
         return respond(answer, even[1], name)
 
@@ -50,20 +66,23 @@ def point(attempt, name):
     while True:
         data = gen_question()
         ask(data)
-        r = check(reply(), name, data)
-        if r == R_RIGHT:
-            print(r)
+        answer = reply()
+        print(check(answer, name, data))
+        if check(answer, name, data) == 'Correct!':
             i += 1
         else:
             i = 0
-            print(r)
         if i == attempt:
-            print(f'Congratulations, {name}!')
+            happy(name)
             break
 
 
 def main():
     point(ATTEMPTS, 'Bill')
+    # data = gen_question()
+    # ask(data)
+    # answer = reply()
+    # print(check(answer, 'Bill', data))
 
 
 if __name__ == '__main__':

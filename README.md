@@ -9,5 +9,5 @@ pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
 [![asciicast](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt.svg)](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt)
 # brain-even
 [![asciicast](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu.svg)](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu)
-#brain-calc
+# brain-calc
 [![asciicast](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J.svg)](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J)

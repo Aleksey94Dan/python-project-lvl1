@@ -3,11 +3,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 [![Build Status](https://travis-ci.com/Aleksey94Dan/python-project-lvl1.svg?branch=master)](https://travis-ci.com/Aleksey94Dan/python-project-lvl1)
 
-#Instalation
+# Instalation
 pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
-#brain-games
+# brain-games
 [![asciicast](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt.svg)](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt)
-#brain-even
+# brain-even
 [![asciicast](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu.svg)](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu)
 #brain-calc
 [![asciicast](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J.svg)](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J)

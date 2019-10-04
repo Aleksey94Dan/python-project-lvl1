@@ -12,6 +12,10 @@ def rule():
           RED + " \"no\"" + END + ".")
 
 
+def question_calc():
+    print('What is the result of the expression?')
+
+
 def main():
     rule()
 

@@ -90,8 +90,8 @@ def point(attempt, name,  switch,):
 
 
 def main():
-    # point(ATTEMPTS, 'Bill',  SWITCH_EVEN)
-    # point(ATTEMPTS, 'Bill', SWITCH_CALC)
+    point(ATTEMPTS, 'Bill',  SWITCH_EVEN)
+    point(ATTEMPTS, 'Bill', SWITCH_CALC)
 
 
 if __name__ == '__main__':

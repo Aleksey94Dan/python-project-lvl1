@@ -5,11 +5,11 @@ from brain_games.cli import run
 
 def out_text():
     print("Welcome to the Brain Games!")
-    print()
 
 
 def main():
     out_text()
+    print()
     run()
 
 

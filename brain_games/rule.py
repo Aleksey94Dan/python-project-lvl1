@@ -10,10 +10,17 @@ def rule():
           RED + " \"yes\" " + END +
           "if number even otherwise answer" +
           RED + " \"no\"" + END + ".")
+    print()
 
 
 def question_calc():
     print('What is the result of the expression?')
+    print()
+
+
+def question_gcd():
+    print('Find the greatest common divisor of given numbers.')
+    print()
 
 
 def main():

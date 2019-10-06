@@ -4,7 +4,7 @@ import prompt
 
 # Set range random numbers
 START = 1
-END = 10
+END = 100
 
 # Attempts
 ATTEMPTS = 3

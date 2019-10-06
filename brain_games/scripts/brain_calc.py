@@ -9,7 +9,6 @@ from brain_games.logic import point, ATTEMPTS, SWITCH_CALC
 def main():
     out_text()
     question_calc()
-    print()
 
     name = run()
     point(ATTEMPTS, name, SWITCH_CALC)

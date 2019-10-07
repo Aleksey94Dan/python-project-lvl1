@@ -1,6 +1,6 @@
 from random import randint
 import prompt
-
+from math import gcd
 
 # Set range random numbers
 START = 1
@@ -12,6 +12,7 @@ ATTEMPTS = 3
 # Key for games
 SWITCH_EVEN = 0
 SWITCH_CALC = 1
+SWITCH_GCD = 2
 
 
 def gen_example():
@@ -24,6 +25,13 @@ def gen_example():
     return ((f'{arg1} + {arg2}', f'{arg1 + arg2}'),
             (f'{arg4} - {arg3}', f'{arg4 - arg3}'),
             (f'{arg5} * {arg6}', f'{arg5 * arg6}'),)
+
+
+def gen_gcd():
+    arg1 = randint(START, END)
+    arg2 = randint(START, END)
+    answer = gcd(arg1, arg2)
+    return f'{arg1} {arg2}', f'{answer}'
 
 
 def happy(name):
@@ -74,6 +82,9 @@ def point(attempt, name,  switch,):
         if switch == SWITCH_CALC:
             data = gen_example()[i]
             ask(data[0])
+        elif switch == SWITCH_GCD:
+            data = gen_gcd()
+            ask(data[0])
         else:
             data = gen_question()
             ask(data)
@@ -92,6 +103,7 @@ def point(attempt, name,  switch,):
 def main():
     point(ATTEMPTS, 'Bill',  SWITCH_EVEN)
     point(ATTEMPTS, 'Bill', SWITCH_CALC)
+    point(ATTEMPTS, 'Bill', SWITCH_GCD)
 
 
 if __name__ == '__main__':

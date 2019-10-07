@@ -13,7 +13,7 @@ def rule():
     print()
 
 
-def question_calc():
+def question_gcd():
     print('What is the result of the expression?')
     print()
 

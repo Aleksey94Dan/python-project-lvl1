@@ -23,6 +23,11 @@ def question_progression():
     print()
 
 
+def question_prime():
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    print()
+
+
 def main():
     rule()
 

@@ -14,6 +14,7 @@ SWITCH_EVEN = 0
 SWITCH_CALC = 1
 SWITCH_GCD = 2
 SWITCH_PROGRESSION = 3
+SWITCH_PRIME = 4
 
 
 def gen_example():
@@ -46,6 +47,10 @@ def gen_gcd():
     arg2 = randint(START, END)
     answer = gcd(arg1, arg2)
     return f'{arg1} {arg2}', f'{answer}'
+
+
+def gen_prime():
+    pass
 
 
 def happy(name):
@@ -101,6 +106,9 @@ def point(attempt, name,  switch,):
             ask(data[0])
         elif switch == SWITCH_PROGRESSION:
             data = gen_progression()
+            ask(data[0])
+        elif switch ==  SWITCH_PRIME:
+            data = gen_prime()
             ask(data[0])
         else:
             data = gen_question()

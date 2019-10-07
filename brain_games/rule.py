@@ -18,6 +18,11 @@ def question_gcd():
     print()
 
 
+def question_progression():
+    print('What number is missing in the progression?')
+    print()
+
+
 def main():
     rule()
 

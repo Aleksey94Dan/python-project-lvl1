@@ -4,7 +4,7 @@ from math import gcd
 
 # Set range random numbers
 START = 1
-END = 100
+END = 10
 
 # Attempts
 ATTEMPTS = 3
@@ -13,6 +13,7 @@ ATTEMPTS = 3
 SWITCH_EVEN = 0
 SWITCH_CALC = 1
 SWITCH_GCD = 2
+SWITCH_PROGRESSION = 3
 
 
 def gen_example():
@@ -25,6 +26,19 @@ def gen_example():
     return ((f'{arg1} + {arg2}', f'{arg1 + arg2}'),
             (f'{arg4} - {arg3}', f'{arg4 - arg3}'),
             (f'{arg5} * {arg6}', f'{arg5 * arg6}'),)
+
+
+def gen_progression():
+    a0 = randint(START, END)
+    d = randint(START, END)
+    progression = []
+    for i in range(0, 10):
+        a0 = a0 + d
+        progression.append(str(a0))
+    char = randint(0, len(progression) - 1)
+    symbol = progression.pop(char)
+    progression.insert(char, '...')
+    return ' '.join(progression), symbol
 
 
 def gen_gcd():
@@ -85,6 +99,9 @@ def point(attempt, name,  switch,):
         elif switch == SWITCH_GCD:
             data = gen_gcd()
             ask(data[0])
+        elif switch == SWITCH_PROGRESSION:
+            data = gen_progression()
+            ask(data[0])
         else:
             data = gen_question()
             ask(data)
@@ -104,6 +121,7 @@ def main():
     point(ATTEMPTS, 'Bill',  SWITCH_EVEN)
     point(ATTEMPTS, 'Bill', SWITCH_CALC)
     point(ATTEMPTS, 'Bill', SWITCH_GCD)
+    point(ATTEMPTS, 'Bill', SWITCH_PROGRESSION)
 
 
 if __name__ == '__main__':

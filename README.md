@@ -13,3 +13,5 @@ pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
 [![asciicast](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J.svg)](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J)
 # brain-gcd
 [![asciicast](https://asciinema.org/a/o3gwfyZMCWNUuJc9ibFxmCFUa.svg)](https://asciinema.org/a/o3gwfyZMCWNUuJc9ibFxmCFUa)
+# brain-progression
+[![asciicast](https://asciinema.org/a/wkC7DG5mHBZWpPukkH6V4ixDZ.svg)](https://asciinema.org/a/wkC7DG5mHBZWpPukkH6V4ixDZ)

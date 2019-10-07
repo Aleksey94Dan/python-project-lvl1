@@ -18,11 +18,6 @@ def question_gcd():
     print()
 
 
-def question_gcd():
-    print('Find the greatest common divisor of given numbers.')
-    print()
-
-
 def main():
     rule()
 

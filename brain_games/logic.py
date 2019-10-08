@@ -26,7 +26,11 @@ PRIME_LIST = [
 
 
 def gen_question():
-    return randint(START, END)
+    arg = randint(START, END)
+    if arg % 2 == 0:
+        return arg, 'yes'
+    else:
+        return arg, 'no'
 
 
 def gen_example():
@@ -89,46 +93,35 @@ def reply():
     return ans
 
 
-def is_even(data):
-    arg = data
-    if arg % 2 == 0:
-        return True, 'yes'
-    return False, 'no'
-
-
-def check(answer, name, data, switch=0):
-    if switch == 0:
-        even = is_even(data)
-    else:
-        even = data
+def check(answer, name, data):
+    even = data
     if answer in even:
         return respond(answer, even[1], name, 1)
     else:
         return respond(answer, even[1], name)
 
 
-def point(attempt, name,  switch,):
+def keys(switch, i=0):
+    if switch == SWITCH_CALC:
+        return gen_example()[i]
+    elif switch == SWITCH_GCD:
+        return gen_gcd()
+    elif switch == SWITCH_PROGRESSION:
+        return gen_progression()
+    elif switch == SWITCH_PRIME:
+        return gen_prime()
+    else:
+        return gen_question()
+
+
+def point(attempt, name, switch):
     i = 0
     while True:
-        if switch == SWITCH_CALC:
-            data = gen_example()[i]
-            ask(data[0])
-        elif switch == SWITCH_GCD:
-            data = gen_gcd()
-            ask(data[0])
-        elif switch == SWITCH_PROGRESSION:
-            data = gen_progression()
-            ask(data[0])
-        elif switch == SWITCH_PRIME:
-            data = gen_prime()
-            ask(data[0])
-        else:
-            data = gen_question()
-            ask(data)
-
+        data = keys(switch)
+        ask(data[0])
         answer = reply()
-        print(check(answer, name, data, switch))
-        if check(answer, name, data, switch) == 'Correct!':
+        print(check(answer, name, data))
+        if check(answer, name, data) == 'Correct!':
             i += 1
         else:
             i = 0
@@ -139,11 +132,16 @@ def point(attempt, name,  switch,):
 
 def main():
     name = 'Bill'
-    point(ATTEMPTS, name,  SWITCH_EVEN)
-    point(ATTEMPTS, name, SWITCH_CALC)
-    point(ATTEMPTS, name, SWITCH_GCD)
-    point(ATTEMPTS, name, SWITCH_PROGRESSION)
-    point(ATTEMPTS, name, SWITCH_PRIME)
+    switch = SWITCH_EVEN
+    point(ATTEMPTS, name, switch)
+    switch = SWITCH_CALC
+    point(ATTEMPTS, name, switch)
+    switch = SWITCH_GCD
+    point(ATTEMPTS, name, switch)
+    switch = SWITCH_PROGRESSION
+    point(ATTEMPTS, name, switch)
+    switch = SWITCH_PRIME
+    point(ATTEMPTS, name, switch)
 
 
 if __name__ == '__main__':

@@ -1,5 +1,3 @@
-
-
 def rule():
     print("Answer \"yes\" if number even otherwise answer \"no\".")
     print()

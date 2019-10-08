@@ -39,13 +39,9 @@ def question_prime():
     print()
 
 
-def main():
+if __name__ == '__main__':
     rule()
     question_calc()
     question_gcd()
-    question_prime()
     question_progression()
-
-
-if __name__ == '__main__':
-    main()
+    question_prime()

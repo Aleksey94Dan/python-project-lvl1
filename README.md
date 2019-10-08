@@ -3,20 +3,31 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 [![Build Status](https://travis-ci.com/Aleksey94Dan/python-project-lvl1.svg?branch=master)](https://travis-ci.com/Aleksey94Dan/python-project-lvl1)
 
-# Instalation
+1. [Instalation](#Instalation)
+1. [brain-games](#brain-games)
+2. [brain-even](#brain-even)
+3. [brain-calc](#brain-calc)
+4. [brain-gcd](#brain-gcd)
+5. [brain-progression](#brain-progression)
+6. [brain-prime](#brain-prime)
+
+## Instalation
 pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
 
-# brain-games
+## brain-games
 [![asciicast](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt.svg)](https://asciinema.org/a/znASHED74upmWenvJzxVLRznt)
 
-# brain-even
+## brain-even
 [![asciicast](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu.svg)](https://asciinema.org/a/2z8f89Yq6Sy6OXOXarzoRjREu)
 
-# brain-calc
+## brain-calc
 [![asciicast](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J.svg)](https://asciinema.org/a/pAK0zEszSM33w9N4XRX9fYR7J)
 
-# brain-gcd
+## brain-gcd
 [![asciicast](https://asciinema.org/a/o3gwfyZMCWNUuJc9ibFxmCFUa.svg)](https://asciinema.org/a/o3gwfyZMCWNUuJc9ibFxmCFUa)
 
-# brain-progression
+## brain-progression
 [![asciicast](https://asciinema.org/a/wkC7DG5mHBZWpPukkH6V4ixDZ.svg)](https://asciinema.org/a/wkC7DG5mHBZWpPukkH6V4ixDZ)
+
+## brain-prime
+[![asciicast](https://asciinema.org/a/T9I81g2ovFdOeRObK18XizExc.svg)](https://asciinema.org/a/T9I81g2ovFdOeRObK18XizExc)

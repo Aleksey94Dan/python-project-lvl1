@@ -40,6 +40,10 @@ def question_prime():
 
 def main():
     rule()
+    question_calc()
+    question_gcd()
+    question_prime()
+    question_progression()
 
 
 if __name__ == '__main__':

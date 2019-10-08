@@ -1,6 +1,7 @@
 
 # Констаннты, задающие цвет тексту
 RED = '\033[91m'
+BLUE = '\033[34m'
 BOLD = '\033[1m'
 END = '\033[0m'
 
@@ -29,7 +30,11 @@ def question_progression():
 
 
 def question_prime():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    print('Answer ' +
+          RED + " \"yes\" " + END +
+          ' if given ' + BLUE + 'number' + END +
+          ' is prime. Otherwise answer ' +
+          RED + " \"no\"" + END + '.')
     print()
 
 

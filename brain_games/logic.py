@@ -16,6 +16,18 @@ SWITCH_GCD = 2
 SWITCH_PROGRESSION = 3
 SWITCH_PRIME = 4
 
+# The prime numbers (A000040)
+PRIME_LIST = [
+        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
+        61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127,
+        131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191,
+        193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257,
+        263, 269, 271]
+
+
+def gen_question():
+    return randint(START, END)
+
 
 def gen_example():
     arg1 = randint(START, END)
@@ -50,15 +62,15 @@ def gen_gcd():
 
 
 def gen_prime():
-    pass
+    number = randint(0, len(PRIME_LIST))
+    if number in PRIME_LIST:
+        return number, 'yes'
+    else:
+        return number, 'no'
 
 
 def happy(name):
     return print(f'Congratulations, {name}!')
-
-
-def gen_question():
-    return randint(START, END)
 
 
 def ask(data):
@@ -107,7 +119,7 @@ def point(attempt, name,  switch,):
         elif switch == SWITCH_PROGRESSION:
             data = gen_progression()
             ask(data[0])
-        elif switch ==  SWITCH_PRIME:
+        elif switch == SWITCH_PRIME:
             data = gen_prime()
             ask(data[0])
         else:
@@ -126,10 +138,12 @@ def point(attempt, name,  switch,):
 
 
 def main():
-    point(ATTEMPTS, 'Bill',  SWITCH_EVEN)
-    point(ATTEMPTS, 'Bill', SWITCH_CALC)
-    point(ATTEMPTS, 'Bill', SWITCH_GCD)
-    point(ATTEMPTS, 'Bill', SWITCH_PROGRESSION)
+    name = 'Bill'
+    point(ATTEMPTS, name,  SWITCH_EVEN)
+    point(ATTEMPTS, name, SWITCH_CALC)
+    point(ATTEMPTS, name, SWITCH_GCD)
+    point(ATTEMPTS, name, SWITCH_PROGRESSION)
+    point(ATTEMPTS, name, SWITCH_PRIME)
 
 
 if __name__ == '__main__':

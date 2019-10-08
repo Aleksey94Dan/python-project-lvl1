@@ -32,8 +32,7 @@ def question_progression():
 
 
 def question_prime():
-    print('Answer ' +
-          RED_PRIME + " \"yes\" " + END_PRIME +
+    print('Answer ' + RED_PRIME + " \"yes\" " + END_PRIME +
           ' if given ' + BLUE_PRIME + 'number' + END_PRIME +
           ' is prime. Otherwise answer ' +
           RED_PRIME + " \"no\"" + END_PRIME + '.')

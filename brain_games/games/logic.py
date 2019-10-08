@@ -101,35 +101,6 @@ def check(answer, name, data):
         return respond(answer, even[1], name)
 
 
-def keys(switch, i=0):
-    if switch == SWITCH_CALC:
-        return gen_example()[i]
-    elif switch == SWITCH_GCD:
-        return gen_gcd()
-    elif switch == SWITCH_PROGRESSION:
-        return gen_progression()
-    elif switch == SWITCH_PRIME:
-        return gen_prime()
-    else:
-        return gen_question()
-
-
-def point(attempt, name, switch):
-    i = 0
-    while True:
-        data = keys(switch)
-        ask(data[0])
-        answer = reply()
-        print(check(answer, name, data))
-        if check(answer, name, data) == 'Correct!':
-            i += 1
-        else:
-            i = 0
-        if i == attempt:
-            happy(name)
-            break
-
-
 def main():
     name = 'Bill'
     switch = SWITCH_EVEN

@@ -2,8 +2,8 @@
 
 from brain_games.cli import run
 from .brain_games import out_text
-from brain_games.rule import question_progression
-from brain_games.logic import point, ATTEMPTS, SWITCH_PROGRESSION
+from brain_games.games.rule import question_progression
+from brain_games.games.logic import point, ATTEMPTS, SWITCH_PROGRESSION
 
 
 def main():

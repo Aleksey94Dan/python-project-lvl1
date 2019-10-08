@@ -4,14 +4,15 @@
 RED_RULE = '\033[91m'
 RED_PRIME = '\033[91m'
 BLUE_PRIME = '\033[34m'
-END = '\033[0m'
+END_RULE = '\033[0m'
+END_PRIME = '\033[0m'
 
 
 def rule():
     print("Answer" +
-          RED_RULE + " \"yes\" " + END +
+          RED_RULE + " \"yes\" " + END_RULE +
           "if number even otherwise answer" +
-          RED_RULE + " \"no\"" + END + ".")
+          RED_RULE + " \"no\"" + END_RULE + ".")
     print()
 
 
@@ -32,10 +33,10 @@ def question_progression():
 
 def question_prime():
     print('Answer ' +
-          RED_PRIME + " \"yes\" " + END +
-          ' if given ' + BLUE_PRIME + 'number' + END +
+          RED_PRIME + " \"yes\" " + END_PRIME +
+          ' if given ' + BLUE_PRIME + 'number' + END_PRIME +
           ' is prime. Otherwise answer ' +
-          RED_PRIME + " \"no\"" + END + '.')
+          RED_PRIME + " \"no\"" + END_PRIME + '.')
     print()
 
 

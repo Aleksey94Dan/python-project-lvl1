@@ -94,7 +94,7 @@ def engine(rule, switch):
     description(rule)
     name = run()
     i = 0
-    while True:
+    while i < ATTEMPTS:
         if switch == SWITCH_CALC:
             data = fcn_question(switch)[i]
         else:
@@ -106,9 +106,7 @@ def engine(rule, switch):
         i += 1
         if ans_check != 'Correct!':
             i = 0
-        if i == ATTEMPTS:
-            happy(name)
-            break
+    happy(name)
 
 
 def main():

@@ -71,20 +71,15 @@ def check(answer, name, data):
 def fcn_question(switch):
     arg1 = randint(START, END)
     arg2 = randint(START, END)
-    if switch == SWITCH_EVEN:
-        return gen_question(arg1)
-    elif switch == SWITCH_GCD:
-        return gen_gcd(arg1, arg2)
-    elif switch == SWITCH_PROGRESSION:
-        arg3 = randint(START, END_RANGE_PROGRESSION)
-        return gen_progression(arg1, arg2, arg3)
-    elif switch == SWITCH_PRIME:
-        arg1 = randint(START, len(PRIME_LIST) - 1)
-        return gen_prime(arg1, PRIME_LIST)
-    elif switch == SWITCH_CALC:
-        return gen_calc(arg1, arg2)
-
-# Rules
+    arg3 = randint(START, END_RANGE_PROGRESSION)
+    arg4 = randint(START, len(PRIME_LIST) - 1)
+    switches = {
+            SWITCH_EVEN: gen_question(arg1),
+            SWITCH_CALC: gen_calc(arg1, arg2),
+            SWITCH_PRIME: gen_prime(arg4, PRIME_LIST),
+            SWITCH_PROGRESSION: gen_progression(arg1, arg2, arg3),
+            SWITCH_GCD: gen_gcd(arg1, arg2)}
+    return switches[switch]
 
 
 # Engine

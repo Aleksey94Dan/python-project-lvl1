@@ -1,4 +1,4 @@
-DESCRIPTION_RULE = "Answer \"yes\" if number even otherwise answer \"no\"."
+DESCRIPTION_EVEN = "Answer \"yes\" if number even otherwise answer \"no\"."
 
 
 def gen_question(arg):

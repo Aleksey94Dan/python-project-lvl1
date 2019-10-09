@@ -1,6 +1,6 @@
 from math import gcd
 
-DESCRIPTION_RULE = "Find the greatest common divisor of given numbers."
+DESCRIPTION_GCD = "Find the greatest common divisor of given numbers."
 
 
 def gen_gcd(arg1, arg2):

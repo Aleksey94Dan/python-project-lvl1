@@ -1,4 +1,4 @@
-DESCRIPTION_RULE = "What number is missing in the progression?"
+DESCRIPTION_PROGRESSION = "What number is missing in the progression?"
 
 
 def gen_progression(arg1, arg2, arg3):

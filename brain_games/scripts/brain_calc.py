@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 from brain_games.engine import engine, SWITCH_CALC
-from brain_games.games.calc import DESCRIPTION_RULE
+from brain_games.games.calc import DESCRIPTION_CALC
 
 
 def main():
-    engine(DESCRIPTION_RULE, SWITCH_CALC)
+    engine(DESCRIPTION_CALC, SWITCH_CALC)
 
 
 if __name__ == '__main__':

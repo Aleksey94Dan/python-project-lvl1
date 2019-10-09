@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 from brain_games.engine import engine, SWITCH_EVEN
-from brain_games.games.even import DESCRIPTION_RULE
+from brain_games.games.even import DESCRIPTION_EVEN
 
 
 def main():
-    engine(DESCRIPTION_RULE, SWITCH_EVEN)
+    engine(DESCRIPTION_EVEN, SWITCH_EVEN)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-DESCRIPTION_RULE = "What is the result of the expression?"
+DESCRIPTION_CALC = "What is the result of the expression?"
 
 
 def gen_calc(arg1, arg2):

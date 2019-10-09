@@ -103,9 +103,8 @@ def engine(rule, switch):
         ans_user = reply()
         ans_check = check(ans_user, name, data)
         print(ans_check)
-        if ans_check == 'Correct!':
-            i += 1
-        else:
+        i += 1
+        if ans_check != 'Correct!':
             i = 0
         if i == ATTEMPTS:
             happy(name)

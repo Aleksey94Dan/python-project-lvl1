@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.cli import run
-from .brain_games import out_text
-from brain_games.games.rule import question_progression
-from brain_games.games.logic import point, ATTEMPTS, SWITCH_PROGRESSION
+from brain_games.engine import engine, SWITCH_PROGRESSION
+from brain_games.games.progression import DESCRIPTION_RULE
 
 
 def main():
-    out_text()
-    question_progression()
-    name = run()
-    point(ATTEMPTS, name, SWITCH_PROGRESSION)
+    engine(DESCRIPTION_RULE, SWITCH_PROGRESSION)
 
 
 if __name__ == '__main__':

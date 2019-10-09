@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 
-from .brain_games import out_text
-from brain_games.games.rule import question_prime
-from brain_games.cli import run
-from brain_games.games.logic import point, ATTEMPTS, SWITCH_PRIME
+from brain_games.engine import engine, SWITCH_PRIME
+from brain_games.games.prime import DESCRIPTION_RULE
 
 
 def main():
-    out_text()
-    question_prime()
-    name = run()
-    point(ATTEMPTS, name, SWITCH_PRIME)
+    engine(DESCRIPTION_RULE, SWITCH_PRIME)
 
 
 if __name__ == '__main__':

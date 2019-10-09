@@ -95,10 +95,8 @@ def engine(rule, switch):
     name = run()
     i = 0
     while i < ATTEMPTS:
-        if switch == SWITCH_CALC:
-            data = fcn_question(switch)[i]
-        else:
-            data = fcn_question(switch)
+        data = fcn_question(switch)[i] \
+            if switch == SWITCH_CALC else fcn_question(switch)
         ask(data[0])
         ans_user = reply()
         ans_check = check(ans_user, name, data)

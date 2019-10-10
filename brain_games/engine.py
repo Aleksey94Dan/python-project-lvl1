@@ -2,11 +2,12 @@ import prompt
 from random import randint
 from brain_games.cli import run
 from brain_games.games.game import greeting
-from brain_games.games.even import gen_question
-from brain_games.games.gcd import gen_gcd
-from brain_games.games.progression import gen_progression
-from brain_games.games.prime import gen_prime
-from brain_games.games.calc import gen_calc
+from brain_games.games.even import gen_question, DESCRIPTION_EVEN
+from brain_games.games.gcd import gen_gcd, DESCRIPTION_GCD
+from brain_games.games.progression import gen_progression, \
+    DESCRIPTION_PROGRESSION
+from brain_games.games.prime import gen_prime, DESCRIPTION_PRIME
+from brain_games.games.calc import gen_calc, DESCRIPTION_CALC
 # Set range random numbers
 START = 1
 END = 10
@@ -22,6 +23,12 @@ SWITCH_GCD = 2
 SWITCH_PROGRESSION = 3
 SWITCH_PRIME = 4
 
+# Description
+DESCRIPTION_CALC = DESCRIPTION_CALC
+DESCRIPTION_PRIME = DESCRIPTION_PRIME
+DESCRIPTION_PROGRESSION = DESCRIPTION_PROGRESSION
+DESCRIPTION_EVEN = DESCRIPTION_EVEN
+DESCRIPTION_GCD = DESCRIPTION_GCD
 
 # The prime numbers (A000040)
 PRIME_LIST = [

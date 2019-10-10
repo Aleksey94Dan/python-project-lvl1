@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import engine, SWITCH_PRIME
-from brain_games.games.prime import DESCRIPTION_PRIME
+from brain_games.engine import engine, SWITCH_PRIME, DESCRIPTION_PRIME
 
 
 def main():

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import engine, SWITCH_EVEN
-from brain_games.games.even import DESCRIPTION_EVEN
+from brain_games.engine import engine, SWITCH_EVEN, DESCRIPTION_EVEN
 
 
 def main():

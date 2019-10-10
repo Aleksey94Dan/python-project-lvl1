@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import engine, SWITCH_CALC
-from brain_games.games.calc import DESCRIPTION_CALC
+from brain_games.engine import engine, SWITCH_CALC, DESCRIPTION_CALC
 
 
 def main():

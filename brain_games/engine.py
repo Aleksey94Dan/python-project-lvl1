@@ -107,11 +107,3 @@ def engine(rule, switch):
         if ans_check != 'Correct!':
             i = 0
     happy(name)
-
-
-def main():
-    engine(None, SWITCH_PROGRESSION)
-
-
-if __name__ == '__main__':
-    main()

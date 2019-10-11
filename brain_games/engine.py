@@ -10,7 +10,7 @@ from brain_games.games.prime import gen_prime, DESCRIPTION_PRIME
 from brain_games.games.calc import gen_calc, DESCRIPTION_CALC
 # Set range random numbers
 START = 1
-END = 10
+END = 100
 END_RANGE_PROGRESSION = 10 - 1
 
 # Attempts

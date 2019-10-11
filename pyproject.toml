@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "Aleksey94Dan_brain_games"
-version = "1.11.4"
-description = ""
+version = "1.12.4"
+description = "This is package for short brain games"
 authors = ["Aleksey Danilchenko <danilchenko.aleksey94@gmail.com>"]
 packages = [{ include = "brain_games"}]
+classifiers = ["Topic :: Games/Entertainment"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

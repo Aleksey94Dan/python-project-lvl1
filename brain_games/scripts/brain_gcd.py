@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import engine, SWITCH_GCD, DESCRIPTION_GCD
+from brain_games.engine import start
+from brain_games.games import gcd
 
 
 def main():
-    engine(DESCRIPTION_GCD, SWITCH_GCD)
+    start(gcd)
 
 
 if __name__ == '__main__':

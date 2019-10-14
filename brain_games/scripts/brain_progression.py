@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import engine, SWITCH_PROGRESSION, \
-    DESCRIPTION_PROGRESSION
+from brain_games.engine import start
+from brain_games.games import progression
 
 
 def main():
-    engine(DESCRIPTION_PROGRESSION, SWITCH_PROGRESSION)
+    start(progression)
 
 
 if __name__ == '__main__':

@@ -8,5 +8,3 @@ def gen():
         return arg, 'yes'
     else:
         return arg, 'no'
-
-

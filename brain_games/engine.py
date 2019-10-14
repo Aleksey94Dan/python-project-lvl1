@@ -44,17 +44,14 @@ def check(answer, name, data):
 
 # Engine
 def start(naming):
-    # Часть игры, которая привествует игрока
     rule = naming.DESCRIPTION
     greeting()
     description(rule)
     name = run()
     i = 0
     while i < ATTEMPTS:
-        if 'calc' in naming.gen():
-            data = naming.gen()[i]
-        else:
-            data = naming.gen()
+        # if 'calc' in naming.gen():
+        data = naming.gen()[i] if 'calc' in naming.gen() else naming.gen()
         ask(data[0])
         ans_user = reply()
         ans_check = check(ans_user, name, data)

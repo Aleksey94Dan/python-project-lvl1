@@ -1,11 +1,18 @@
-from math import gcd
 from random import randint
+DENOTATION = "Find the greatest common divisor of given numbers."
 
-DESCRIPTION = "Find the greatest common divisor of given numbers."
+START = 0
+FINISH = 100
 
 
-def gen():
-    arg1 = randint(0, 100)
-    arg2 = randint(0, 100)
-    answer = gcd(arg1, arg2)
-    return f'{arg1} {arg2}', f'{answer}'
+def get_game():
+    first_number = randint(START, FINISH)
+    second_number = randint(START, FINISH)
+    answer = gcd(first_number, second_number)
+    return f'{first_number} {second_number}', str(answer)
+
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)

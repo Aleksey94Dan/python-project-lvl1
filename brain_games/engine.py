@@ -34,9 +34,9 @@ def run(game=None):
         game_issue, game_response = game.get_game()
         ask(game_issue)
         user_response = cli.get_user_response()
-        a = check_response(user_response, username, game_response)
-        print(a)
+        correct_answer = check_response(user_response, username, game_response)
+        print(correct_answer)
         i = i + 1
-        if a != 'Correct!':
+        if correct_answer != 'Correct!':
             i = 0
     congratulate(username)

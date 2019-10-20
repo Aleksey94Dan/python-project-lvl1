@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.games.game import greeting
-from brain_games.cli import run
+
+from brain_games import engine
 
 
 def main():
-    greeting()
-    run()
+    engine.run()
 
 
 if __name__ == '__main__':

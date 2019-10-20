@@ -1,15 +1,37 @@
-from random import randint
-DESCRIPTION = "What number is missing in the progression?"
+from random import randint, choice
 
 
-def gen():
-    a0 = randint(0, 100)
-    d = randint(0, 20)
+DENOTATION = "What number is missing in the progression?"
+START = 0
+FINISH = 100
+START_DIFFERENCE = 1
+FINISH_DIFFERENCE = 10
+FIRST_MEMBER_PROGRESSION = 0
+LAST_MEMBER_PROGRESSION = 10
+
+
+def get_denotation():
+    print(DENOTATION)
+    print()
+
+
+def get_progression(a0, d):
     progression = []
-    for i in range(0, 10):
+    for i in range(FIRST_MEMBER_PROGRESSION, LAST_MEMBER_PROGRESSION):
         a0 = a0 + d
         progression.append(str(a0))
-    char = randint(0, len(progression) - 1)
-    symbol = progression.pop(char)
-    progression.insert(char, '...')
-    return ' '.join(progression), symbol
+    return progression
+
+
+def replace_with_ellipsis(lst):
+    element_index = lst.index(choice(lst))
+    element = lst.pop(element_index)
+    lst.insert(element_index, '...')
+    return ' '.join(lst), element
+
+
+def get_game():
+    a0 = randint(START, FINISH)
+    d = randint(START_DIFFERENCE, FINISH_DIFFERENCE)
+    progression = get_progression(a0, d)
+    return replace_with_ellipsis(progression)

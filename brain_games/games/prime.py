@@ -1,9 +1,25 @@
 from random import randint
+
 DENOTATION = "Answer \"yes\" if given number is prime. " \
                    "Otherwise answer \"no\"."
-
 START = 0
 FINISH = 100
+
+
+def get_denotation():
+    print(DENOTATION)
+    print()
+
+
+def is_prime(arg1):
+    if arg1 == 1 or arg1 == 0:
+        return False
+    for i in range(2, arg1+1):
+        if i * i > arg1:
+            break
+        if arg1 % i == 0:
+            return False
+    return True
 
 
 def get_game():
@@ -11,7 +27,3 @@ def get_game():
     if is_prime(prime_number):
         return prime_number, 'yes'
     return prime_number, 'no'
-
-
-def is_prime(arg1):
-    pass

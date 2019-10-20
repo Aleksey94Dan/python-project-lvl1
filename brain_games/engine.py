@@ -1,63 +1,42 @@
-import prompt
-from brain_games.cli import run
-# welcoming
-from brain_games.games.game import greeting
+from brain_games import cli
 
-# Attempts
+
 ATTEMPTS = 3
+GREETING = "Welcome to the Brain Games!"
 
 
-# questions
+def greet():
+    print()
+    print(GREETING)
+
+
 def ask(data):
     print(f'Question: {data}')
 
 
-# description
-def description(rule):
-    print(rule)
-
-
-# congratulations
-def happy(name):
+def congratulate(name):
     return print(f'Congratulations, {name}!')
 
 
-# answer of user
-def reply():
-    ans = prompt.string("Your answer: ").lower()
-    return ans
-
-
-# right answers
-def respond(answer, ans, name, switch=0):
-    if ans and switch == 1:
+def check_response(answer, name, data):
+    if answer == data:
         return 'Correct!'
     return f"'{answer}' is wrong answer " \
-        f";(. Correct answer was '{ans}'. Let's try again, {name}!"
+        f";(. Correct answer was '{data}'. Let's try again, {name}!"
 
 
-def check(answer, name, data):
-    if answer in data:
-        return respond(answer, data[1], name, 1)
-    else:
-        return respond(answer, data[1], name)
-
-
-# Engine
-def start(naming):
-    rule = naming.DESCRIPTION
-    greeting()
-    description(rule)
-    name = run()
+def run(game=None):
+    greet()
+    game.get_denotation()
+    username = cli.get_username()
     i = 0
     while i < ATTEMPTS:
-        # if 'calc' in naming.gen():
-        data = naming.gen()[i] if 'calc' in naming.gen() else naming.gen()
-        ask(data[0])
-        ans_user = reply()
-        ans_check = check(ans_user, name, data)
-        print(ans_check)
-        i += 1
-        if ans_check != 'Correct!':
+        game_issue, game_response = game.get_game()
+        ask(game_issue)
+        user_response = cli.get_user_response()
+        a = check_response(user_response, username, game_response)
+        print(a)
+        i = i + 1
+        if a != 'Correct!':
             i = 0
-    happy(name)
+    congratulate(username)

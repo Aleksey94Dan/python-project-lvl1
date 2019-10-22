@@ -1,7 +1,7 @@
 from random import randint
 
 DENOTATION = "Answer \"yes\" if given number is prime. " \
-                   "Otherwise answer \"no\"."
+                   "Otherwise actual_response \"no\"."
 START = 0
 FINISH = 100
 

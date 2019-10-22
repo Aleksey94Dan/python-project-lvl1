@@ -31,8 +31,8 @@ def run_gameplay(game):
     username = cli.get_username()
     i = 0
     while i < ATTEMPTS:
-        game_issue, game_response = game.get_game()
-        ask(game_issue)
+        game_question, game_response = game.get_game()
+        ask(game_question)
         user_response = cli.get_user_response()
         correct_answer = check_response(
             username,

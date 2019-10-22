@@ -30,16 +30,20 @@ def run(game=None):
     if game:
         game.get_denotation()
         username = cli.get_username()
-        i = 0
-        while i < ATTEMPTS:
-            game_issue, game_response = game.get_game()
-            ask(game_issue)
-            user_response = cli.get_user_response()
-            correct_answer = check_response(
-                user_response, username, game_response
-            )
-            print(correct_answer)
-            i = i + 1
-            if correct_answer != 'Correct!':
-                i = 0
-        congratulate(username)
+        run_gameplay(username, game)
+
+
+def run_gameplay(username, game):
+    i = 0
+    while i < ATTEMPTS:
+        game_issue, game_response = game.get_game()
+        ask(game_issue)
+        user_response = cli.get_user_response()
+        correct_answer = check_response(
+            user_response, username, game_response
+        )
+        print(correct_answer)
+        i = i + 1
+        if correct_answer != 'Correct!':
+            i = 0
+    congratulate(username)

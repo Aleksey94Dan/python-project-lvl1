@@ -15,19 +15,19 @@
 pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
 
 ## brain-games
-[![asciicast](https://asciinema.org/a/HMD7avDvXQUl6XBn2rsrRe9TX.svg)](https://asciinema.org/a/HMD7avDvXQUl6XBn2rsrRe9TX)
+[![asciicast](https://asciinema.org/a/UHz6YXS4qEG1EFAAH07CwcaKM.svg)](https://asciinema.org/a/UHz6YXS4qEG1EFAAH07CwcaKM)
 
 ## brain-even
-[![asciicast](https://asciinema.org/a/WF0y8dqCj2WYKbx0q8dZsqgMA.svg)](https://asciinema.org/a/WF0y8dqCj2WYKbx0q8dZsqgMA)
+[![asciicast](https://asciinema.org/a/dr91EF2Dz5tK5WH8bSiBKjtL3.svg)](https://asciinema.org/a/dr91EF2Dz5tK5WH8bSiBKjtL3)
 
 ## brain-calc
-[![asciicast](https://asciinema.org/a/wrYz0qftarKLNKUJV2NJe3BFE.svg)](https://asciinema.org/a/wrYz0qftarKLNKUJV2NJe3BFE)
+[![asciicast](https://asciinema.org/a/5MYcMXJj7oS0vYIN8Lo9CIhn6.svg)](https://asciinema.org/a/5MYcMXJj7oS0vYIN8Lo9CIhn6)
 
 ## brain-gcd
-[![asciicast](https://asciinema.org/a/ORk1JYJH3NzsyHjJWlbnUG0Jc.svg)](https://asciinema.org/a/ORk1JYJH3NzsyHjJWlbnUG0Jc)
+[![asciicast](https://asciinema.org/a/WlmyJfKiCFta4niyWsPaQDuHd.svg)](https://asciinema.org/a/WlmyJfKiCFta4niyWsPaQDuHd)
 
 ## brain-progression
-[![asciicast](https://asciinema.org/a/c5CUfDxdFdj5PcQhRAozzkPUA.svg)](https://asciinema.org/a/c5CUfDxdFdj5PcQhRAozzkPUA)
+[![asciicast](https://asciinema.org/a/qD94SnGimVvaImTe3ijivCdJG.svg)](https://asciinema.org/a/qD94SnGimVvaImTe3ijivCdJG)
 
 ## brain-prime
-[![asciicast](https://asciinema.org/a/554VC82LiTlFISE4Cuho0qQQg.svg)](https://asciinema.org/a/554VC82LiTlFISE4Cuho0qQQg)
+[![asciicast](https://asciinema.org/a/92l5M85DDWPh14IyFd12FYoRV.svg)](https://asciinema.org/a/92l5M85DDWPh14IyFd12FYoRV)

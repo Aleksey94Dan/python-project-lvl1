@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Aleksey94Dan_brain_games"
-version = "1.13.5"
+version = "1.13.6"
 description = "This is package for short brain games"
 authors = ["Aleksey Danilchenko <danilchenko.aleksey94@gmail.com>"]
 packages = [{ include = "brain_games"}]

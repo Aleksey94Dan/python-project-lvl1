@@ -14,11 +14,11 @@ def get_denotation():
 def is_prime(arg1):
     if arg1 == 1 or arg1 == 0:
         return False
-    for i in range(2, arg1+1):
-        if i * i > arg1:
-            break
+    i = 1
+    while i * i > arg1:
         if arg1 % i == 0:
             return False
+        i = i + 1
     return True
 
 

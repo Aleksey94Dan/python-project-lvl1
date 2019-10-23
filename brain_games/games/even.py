@@ -1,7 +1,7 @@
 from random import randint
 
 
-DENOTATION = "Answer \"yes\" if number even otherwise actual_response \"no\"."
+DENOTATION = "Answer \"yes\" if number even otherwise answer \"no\"."
 START = 0
 FINISH = 100
 

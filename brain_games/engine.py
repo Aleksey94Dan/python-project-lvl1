@@ -6,7 +6,6 @@ GREETING = "Welcome to the Brain Games!"
 
 
 def greet():
-    print()
     print(GREETING)
 
 
@@ -14,16 +13,16 @@ def ask(question):
     print(f'Question: {question}')
 
 
-def congratulate(name):
-    return print(f'Congratulations, {name}!')
+def congratulate(name_player):
+    return print(f'Congratulations, {name_player}!')
 
 
-def check_response(name, actual_response, expected_response):
+def check_response(name_player, actual_response, expected_response):
     if actual_response == expected_response:
         return 'Correct!'
     return f"'{actual_response}' is wrong answer " \
         f";(. Correct answer was '{expected_response}'. " \
-           f"Let's try again, {name}!"
+           f"Let's try again, {name_player}!"
 
 
 def run_gameplay(game):

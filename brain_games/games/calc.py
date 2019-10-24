@@ -16,13 +16,13 @@ def get_operation_sign():
     return choice(signs_of_operation)
 
 
-def calculate(arg1, arg2, sign):
+def calculate(number1, number2, sign):
     if sign == '+':
-        return arg1 + arg2
+        return number1 + number2
     elif sign == '-':
-        return arg1 - arg2
+        return number1 - number2
     elif sign == '*':
-        return arg1 * arg2
+        return number1 * number2
 
 
 def get_game():

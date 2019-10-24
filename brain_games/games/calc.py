@@ -29,5 +29,5 @@ def get_game():
     first_number = randint(START, FINISH)
     second_number = randint(START, FINISH)
     math_operation = get_operation_sign()
-    result = calculate(first_number, second_number, math_operation)
-    return f'{first_number} {math_operation} {second_number}', str(result)
+    answer = calculate(first_number, second_number, math_operation)
+    return f'{first_number} {math_operation} {second_number}', str(answer)

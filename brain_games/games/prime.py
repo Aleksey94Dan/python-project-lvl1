@@ -4,19 +4,25 @@ DENOTATION = "Answer \"yes\" if given number is prime. " \
                    "Otherwise answer \"no\"."
 START = 0
 FINISH = 100
+FIRST_PRIME_NUMBER = 2
 
 
 def get_denotation():
     print(DENOTATION)
     print()
+    
+
+def is_zero_or_one(number):
+    if number == 0 or number == 1:
+        return True
 
 
-def is_prime(arg1):
-    if arg1 == 1 or arg1 == 0:
+def is_prime(number):
+    if is_zero_or_one(number):
         return False
-    i = 2
-    while i * i <= arg1:
-        if arg1 % i == 0:
+    i = FIRST_PRIME_NUMBER
+    while i * i <= number:
+        if number % i == 0:
             return False
         i = i + 1
     return True

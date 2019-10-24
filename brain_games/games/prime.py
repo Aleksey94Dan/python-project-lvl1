@@ -10,7 +10,7 @@ FIRST_PRIME_NUMBER = 2
 def get_denotation():
     print(DENOTATION)
     print()
-    
+
 
 def is_zero_or_one(number):
     if number == 0 or number == 1:

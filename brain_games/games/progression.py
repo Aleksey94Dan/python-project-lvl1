@@ -18,8 +18,8 @@ def get_denotation():
 def get_progression(a0, d):
     progression = []
     for i in range(FIRST_MEMBER_PROGRESSION, LAST_MEMBER_PROGRESSION):
-        a0 = a0 + d
         progression.append(str(a0))
+        a0 = a0 + d
     return progression
 
 

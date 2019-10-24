@@ -33,5 +33,5 @@ def replace_with_ellipsis(lst):
 def get_game():
     a0 = randint(START, FINISH)
     d = randint(START_OF_DIFFERENCE, FINISH_OF_DIFFERENCE)
-    progression = get_progression(a0, d)
-    return replace_with_ellipsis(progression)
+    game = get_progression(a0, d)
+    return replace_with_ellipsis(game)

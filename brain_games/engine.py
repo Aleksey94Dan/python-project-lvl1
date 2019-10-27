@@ -33,14 +33,14 @@ def run_gameplay(game):
         game_question, game_response = game.get_game()
         ask(game_question)
         user_response = cli.get_user_response()
-        correct_answer = check_response(
+        correct_answer_text, correct_answer_value = check_response(
             username,
             user_response,
             game_response,
         )
-        print(correct_answer[0])
+        print(correct_answer_text)
         i = i + 1
-        if not correct_answer[1]:
+        if not correct_answer_value:
             i = 0
     congratulate(username)
 

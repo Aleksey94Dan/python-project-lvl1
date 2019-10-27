@@ -12,7 +12,7 @@ def get_denotation():
 
 
 def gcd(a, b):
-    if b == 0:
+    if not b:
         return a
     return gcd(b, a % b)
 

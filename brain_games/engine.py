@@ -19,10 +19,10 @@ def congratulate(name_player):
 
 def check_response(name_player, actual_response, expected_response):
     if actual_response == expected_response:
-        return 'Correct!'
+        return 'Correct!', True
     return f"'{actual_response}' is wrong answer " \
         f";(. Correct answer was '{expected_response}'. " \
-           f"Let's try again, {name_player}!"
+           f"Let's try again, {name_player}!", False
 
 
 def run_gameplay(game):
@@ -36,11 +36,11 @@ def run_gameplay(game):
         correct_answer = check_response(
             username,
             user_response,
-            game_response
+            game_response,
         )
-        print(correct_answer)
+        print(correct_answer[0])
         i = i + 1
-        if correct_answer != 'Correct!':
+        if not correct_answer[1]:
             i = 0
     congratulate(username)
 

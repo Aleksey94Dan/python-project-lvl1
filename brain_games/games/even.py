@@ -13,6 +13,6 @@ def get_denotation():
 
 def get_game():
     number = randint(START, FINISH)
-    if number % 2 == 0:
+    if not number % 2:
         return number, 'yes'
     return number, 'no'

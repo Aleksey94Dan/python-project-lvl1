@@ -1,4 +1,5 @@
 from random import randint
+from math import sqrt
 
 DENOTATION = "Answer \"yes\" if given number is prime. " \
                    "Otherwise answer \"no\"."
@@ -17,14 +18,21 @@ def is_zero_or_one(number):
         return True
 
 
+def is_even(number):
+    if not number % 2:
+        return True
+
+
 def is_prime(number):
+    if number == FIRST_PRIME_NUMBER:
+        return True
+    if is_even(number):
+        return False
     if is_zero_or_one(number):
         return False
-    i = FIRST_PRIME_NUMBER
-    while i * i <= number:
+    for i in range(FIRST_PRIME_NUMBER + 1, int(sqrt(number))+1, 2):
         if number % i == 0:
             return False
-        i = i + 1
     return True
 
 

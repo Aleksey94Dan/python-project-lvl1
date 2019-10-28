@@ -26,7 +26,7 @@ def is_prime(number):
     if is_even(number) or is_zero_or_one(number):
         return False
     for i in range(FIRST_PRIME_NUMBER + 1, int(sqrt(number))+1, 2):
-        if number % i == 0:
+        if not number % i:
             return False
     return True
 
@@ -37,5 +37,5 @@ def is_even(number):
 
 
 def is_zero_or_one(number):
-    if number == 0 or number == 1:
+    if not number or number:
         return True

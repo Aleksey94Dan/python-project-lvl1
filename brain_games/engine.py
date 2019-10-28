@@ -11,7 +11,7 @@ def run(game=None):
         return
     game.get_denotation()
     username = cli.get_username()
-    for i in range(1, ATTEMPTS + 1):
+    for attempt in range(1, ATTEMPTS + 1):
         game_question, game_response = game.get_game()
         ask(game_question)
         user_response = cli.get_user_response()
@@ -23,8 +23,7 @@ def run(game=None):
         print(correct_answer_text)
         if not correct_answer_value:
             break
-        if i == ATTEMPTS:
-            congratulate(username)
+        congratulate(username, attempt)
 
 
 def greet():
@@ -43,5 +42,6 @@ def check_response(name_player, actual_response, expected_response):
            f"Let's try again, {name_player}!", False
 
 
-def congratulate(name_player):
-    return print(f'Congratulations, {name_player}!')
+def congratulate(name_player, attempt):
+    if attempt == ATTEMPTS:
+        return print(f'Congratulations, {name_player}!')

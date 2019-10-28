@@ -23,7 +23,7 @@ def get_game():
 def is_prime(number):
     if number == FIRST_PRIME_NUMBER:
         return True
-    if is_even(number) or is_zero_or_one(number):
+    elif is_even(number) or is_zero_or_one(number):
         return False
     for i in range(FIRST_PRIME_NUMBER + 1, int(sqrt(number))+1, 2):
         if not number % i:

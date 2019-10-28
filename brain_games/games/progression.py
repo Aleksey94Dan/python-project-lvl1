@@ -13,11 +13,17 @@ def get_denotation():
     print()
 
 
+def get_game():
+    a0 = randint(START, FINISH)
+    d = randint(START_OF_DIFFERENCE, FINISH_OF_DIFFERENCE)
+    replacement_index = randint(0, 9)
+    return get_progression(a0, d, replacement_index)
+
+
 def get_progression(a0, d, element_index):
     progression = []
     three_dots = '...'
     element = ''
-
     for i in range(0, 10):
         if i != element_index:
             progression.append(str(a0))
@@ -27,10 +33,3 @@ def get_progression(a0, d, element_index):
             progression.append(three_dots)
             a0 = a0 + d
     return ' '.join(progression), element
-
-
-def get_game():
-    a0 = randint(START, FINISH)
-    d = randint(START_OF_DIFFERENCE, FINISH_OF_DIFFERENCE)
-    replacement_index = randint(0, 9)
-    return get_progression(a0, d, replacement_index)

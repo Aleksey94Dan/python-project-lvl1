@@ -1,6 +1,7 @@
 from random import randint
 from math import sqrt
 
+
 DENOTATION = "Answer \"yes\" if given number is prime. " \
                    "Otherwise answer \"no\"."
 START = 0
@@ -21,21 +22,11 @@ def get_game():
 
 
 def is_prime(number):
-    if number == FIRST_PRIME_NUMBER:
-        return True
-    elif is_even(number) or is_zero_or_one(number):
-        return False
-    for i in range(FIRST_PRIME_NUMBER + 1, int(sqrt(number))+1, 2):
-        if not number % i:
+    if number < FIRST_PRIME_NUMBER or number % 2 == 0:
+        return number == FIRST_PRIME_NUMBER
+    i = 3
+    while i <= int(sqrt(number)):
+        if number % i == 0:
             return False
+        i = i + 2
     return True
-
-
-def is_even(number):
-    if not number % 2:
-        return True
-
-
-def is_zero_or_one(number):
-    if not number or number:
-        return True

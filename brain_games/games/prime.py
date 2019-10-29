@@ -22,11 +22,11 @@ def get_game():
 
 
 def is_prime(number):
-    if number < FIRST_PRIME_NUMBER or number % 2 == 0:
+    if number < FIRST_PRIME_NUMBER or not number % 2:
         return number == FIRST_PRIME_NUMBER
     i = 3
     while i <= int(sqrt(number)):
-        if number % i == 0:
+        if not number % i:
             return False
         i = i + 2
     return True

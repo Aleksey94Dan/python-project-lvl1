@@ -24,9 +24,9 @@ def get_game():
 def is_prime(number):
     if number < FIRST_PRIME_NUMBER or not number % 2:
         return number == FIRST_PRIME_NUMBER
-    i = 3
-    while i <= int(sqrt(number)):
-        if not number % i:
+    divider = 3
+    while divider <= sqrt(number):
+        if not number % divider:
             return False
-        i = i + 2
+        divider = divider + 2
     return True

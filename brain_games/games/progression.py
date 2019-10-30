@@ -6,6 +6,7 @@ START = 0
 FINISH = 100
 START_OF_DIFFERENCE = 1
 FINISH_OF_DIFFERENCE = 10
+PROGRESSION_LENGTH = 10
 
 
 def get_denotation():
@@ -24,7 +25,7 @@ def get_progression(a0, d, element_index):
     progression = []
     three_dots = '...'
     element = ''
-    for i in range(0, 10):
+    for i in range(0, PROGRESSION_LENGTH):
         if i != element_index:
             progression.append(str(a0))
             a0 = a0 + d

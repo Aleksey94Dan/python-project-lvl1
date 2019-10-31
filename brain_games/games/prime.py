@@ -15,10 +15,10 @@ def get_denotation():
 
 
 def get_game():
-    prime_number = randint(START, FINISH)
-    if is_prime(prime_number):
-        return prime_number, 'yes'
-    return prime_number, 'no'
+    number = randint(START, FINISH)
+    if is_prime(number):
+        return number, 'yes'
+    return number, 'no'
 
 
 def is_prime(number):

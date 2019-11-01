@@ -22,5 +22,5 @@ def get_operation(a, b):
     operation = (('+', add(a, b)),
                  ('-', sub(a, b)),
                  ('*', mul(a, b)),
-                )
+                 )
     return choice(operation)

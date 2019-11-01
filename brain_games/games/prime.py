@@ -25,7 +25,8 @@ def is_prime(number):
     if number < FIRST_PRIME_NUMBER or not number % 2:
         return number == FIRST_PRIME_NUMBER
     divider = 3
-    while divider <= sqrt(number):
+    max_divider = sqrt(number)
+    while divider <= max_divider:
         if not number % divider:
             return False
         divider = divider + 2

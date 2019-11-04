@@ -1,4 +1,6 @@
 from random import randint, choice
+from operator import add, sub, mul
+
 
 DENOTATION = "What is the result of the expression?"
 START = 0
@@ -13,15 +15,9 @@ def get_denotation():
 def get_game():
     first_number = randint(START, FINISH)
     second_number = randint(START, FINISH)
-    math_operation, answer = get_operation(first_number, second_number)
-    return f'{first_number} {math_operation} {second_number}', str(answer)
+    math_operation, answer = choice([['+', add], ['-', sub], ['*', mul]])
+    return f'{first_number} {math_operation} {second_number}',\
+        str(answer(first_number, second_number))
 
 
-def get_operation(a, b):
-    operation = choice(['+', '-', '*'])
-    if operation == '+':
-        return '+', a + b
-    elif operation == '-':
-        return '-', a - b
-    elif operation == '*':
-        return '*', a * b
+print(get_game())

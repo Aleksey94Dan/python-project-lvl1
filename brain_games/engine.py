@@ -2,7 +2,6 @@ from brain_games import cli
 
 
 ATTEMPTS = 3
-GREETING = "Welcome to the Brain Games!"
 
 
 def run(game=None):
@@ -15,19 +14,19 @@ def run(game=None):
         game_question, game_response = game.get_game()
         ask(game_question)
         user_response = cli.get_user_response()
-        correct_answer_text, correct_answer_value = check_response(
+        correct_answer_text, answer_is_value = check_response(
             username,
             user_response,
             game_response,
         )
         print(correct_answer_text)
-        if not correct_answer_value:
+        if not answer_is_value:
             break
         congratulate(username, attempt)
 
 
 def greet():
-    print(GREETING)
+    print("Welcome to the Brain Games!")
 
 
 def ask(question):

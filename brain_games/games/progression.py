@@ -26,11 +26,10 @@ def get_progression(a0, d, element_index):
     three_dots = '...'
     element = ''
     for i in range(0, PROGRESSION_LENGTH):
-        if i != element_index:
-            progression.append(str(a0))
-            a0 = a0 + d
-        else:
-            element = str(a0)
-            progression.append(three_dots)
-            a0 = a0 + d
-    return ' '.join(progression), element
+        progression.append(a0)
+        a0 = a0 + d
+        if i == element_index:
+            element = progression[i]
+            progression[i] = three_dots
+    return progression, element
+

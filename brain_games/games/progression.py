@@ -32,4 +32,3 @@ def get_progression(a0, d, element_index):
             element = progression[i]
             progression[i] = three_dots
     return progression, element
-

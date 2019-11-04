@@ -1,5 +1,4 @@
 from random import randint, choice
-from operator import add, mul, sub
 
 DENOTATION = "What is the result of the expression?"
 START = 0
@@ -19,8 +18,10 @@ def get_game():
 
 
 def get_operation(a, b):
-    operation = (('+', add(a, b)),
-                 ('-', sub(a, b)),
-                 ('*', mul(a, b)),
-                 )
-    return choice(operation)
+    operation = choice(['+', '-', '*'])
+    if operation == '+':
+        return '+', a + b
+    elif operation == '-':
+        return '-', a - b
+    elif operation == '*':
+        return '*', a * b

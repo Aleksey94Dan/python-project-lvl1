@@ -10,7 +10,7 @@ def run(game=None):
         return
     game.get_denotation()
     username = cli.get_username()
-    for attempt in range(1, ATTEMPTS + 1):
+    for attempt in range(ATTEMPTS):
         game_question, game_response = game.get_game()
         ask(game_question)
         user_response = cli.get_user_response()

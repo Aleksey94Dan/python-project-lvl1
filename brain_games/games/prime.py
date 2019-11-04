@@ -22,7 +22,9 @@ def get_game():
 
 
 def is_prime(number):
-    if number < FIRST_PRIME_NUMBER or not number % 2:
+    if number < FIRST_PRIME_NUMBER:
+        return False
+    if not number % 2:
         return number == FIRST_PRIME_NUMBER
     divider = 3
     max_divider = sqrt(number)

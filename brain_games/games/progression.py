@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice
 
 
 DENOTATION = "What number is missing in the progression?"
@@ -6,7 +6,6 @@ START = 0
 FINISH = 100
 START_OF_DIFFERENCE = 1
 FINISH_OF_DIFFERENCE = 10
-PROGRESSION_LENGTH = 10
 
 
 def get_denotation():
@@ -15,20 +14,11 @@ def get_denotation():
 
 
 def get_game():
+    progression = []
     a0 = randint(START, FINISH)
     d = randint(START_OF_DIFFERENCE, FINISH_OF_DIFFERENCE)
-    replacement_index = randint(0, 9)
-    return get_progression(a0, d, replacement_index)
-
-
-def get_progression(a0, d, element_index):
-    progression = []
-    three_dots = '...'
-    element = ''
-    for i in range(0, PROGRESSION_LENGTH):
-        progression.append(a0)
-        a0 = a0 + d
-        if i == element_index:
-            element = progression[i]
-            progression[i] = three_dots
-    return progression, element
+    for a0 in range(a0, a0 + 10 * d, d):
+        progression.append(str(a0))
+    element = choice(progression)
+    progression[progression.index(element)] = '...'
+    return ' '.join(progression), element

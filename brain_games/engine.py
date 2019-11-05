@@ -22,7 +22,7 @@ def run(game=None):
         print(correct_answer_text)
         if not answer_is_value:
             break
-        if attempt == ATTEMPTS:
+        if attempt == ATTEMPTS - 1:
             congratulate(username)
 
 

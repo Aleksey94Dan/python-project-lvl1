@@ -18,6 +18,3 @@ def get_game():
     math_operation, answer = choice([['+', add], ['-', sub], ['*', mul]])
     return f'{first_number} {math_operation} {second_number}',\
         str(answer(first_number, second_number))
-
-
-print(get_game())

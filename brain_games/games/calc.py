@@ -15,6 +15,6 @@ def get_denotation():
 def get_game():
     first_number = randint(START, FINISH)
     second_number = randint(START, FINISH)
-    math_operation, answer = choice([['+', add], ['-', sub], ['*', mul]])
+    math_operation, answer = choice((('+', add), ('-', sub), ('*', mul)))
     return f'{first_number} {math_operation} {second_number}',\
         str(answer(first_number, second_number))

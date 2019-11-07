@@ -14,11 +14,9 @@ def get_denotation():
 
 
 def get_game():
-    progression = []
     a0 = randint(START, FINISH)
     d = randint(START_OF_DIFFERENCE, FINISH_OF_DIFFERENCE)
-    for a0 in range(a0, a0 + 10 * d, d):
-        progression.append(str(a0))
+    progression = [str(a0) for a0 in range(a0, a0 + 10 * d, d)]
     element = choice(progression)
-    progression[progression.index(element)] = '...'
+    progression[progression.index(element)] = '..'
     return ' '.join(progression), element

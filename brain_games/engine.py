@@ -27,6 +27,7 @@ def run(game=None):
 
 
 def greet():
+    print()
     print("Welcome to the Brain Games!")
 
 

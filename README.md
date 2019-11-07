@@ -12,7 +12,7 @@
 6. [brain-prime](#brain-prime)
 
 ## Instalation
-pip install -i https://test.pypi.org/simple/ aleksey94dan-brain-games
+
 
 ## brain-games
 [![asciicast](https://asciinema.org/a/CY74ZpTws7wEiHLJeMtT8b9tx.svg)](https://asciinema.org/a/CY74ZpTws7wEiHLJeMtT8b9tx)

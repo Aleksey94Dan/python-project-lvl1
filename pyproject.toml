@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "Aleksey94Dan_brain_games"
 version = "1.13.14"
-description = ["This is package for short brain games"]
+description = "This is package for short brain games"
 authors = ["Aleksey Danilchenko <danilchenko.aleksey94@gmail.com>"]
 repository = "https://test.pypi.org/project/aleksey94dan-brain-games/"
 packages = [{ include = "brain_games"}]

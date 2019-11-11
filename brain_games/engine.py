@@ -12,7 +12,7 @@ def run(game=None):
     username = cli.get_username()
     for attempt in range(ATTEMPTS):
         game_question, game_response = game.get_game()
-        ask(game_question)
+        print(f'Question: {game_question}')
         user_response = cli.get_user_response()
         correct_answer_text, answer_is_value = check_response(
             username,
@@ -23,16 +23,12 @@ def run(game=None):
         if not answer_is_value:
             break
         if attempt == ATTEMPTS - 1:
-            congratulate(username)
+            print(f'Congratulations, {username}!')
 
 
 def greet():
     print()
     print("Welcome to the Brain Games!")
-
-
-def ask(question):
-    print(f'Question: {question}')
 
 
 def check_response(name_player, actual_response, expected_response):
@@ -41,7 +37,3 @@ def check_response(name_player, actual_response, expected_response):
     return f"'{actual_response}' is wrong answer " \
         f";(. Correct answer was '{expected_response}'. " \
            f"Let's try again, {name_player}!", False
-
-
-def congratulate(name_player):
-    return print(f'Congratulations, {name_player}!')

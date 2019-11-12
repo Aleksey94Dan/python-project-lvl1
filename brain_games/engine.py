@@ -5,7 +5,8 @@ ATTEMPTS = 3
 
 
 def run(game=None):
-    greet()
+    print()
+    print("Welcome to the Brain Games!")
     if not game:
         return
     game.get_denotation()
@@ -14,26 +15,12 @@ def run(game=None):
         game_question, game_response = game.get_game()
         print(f'Question: {game_question}')
         user_response = cli.get_user_response()
-        correct_answer_text, answer_is_value = check_response(
-            username,
-            user_response,
-            game_response,
-        )
-        print(correct_answer_text)
-        if not answer_is_value:
+        if user_response == game_response:
+            print('Correct!')
+        else:
+            print(f"'{user_response}' is wrong answer ;(. "
+                  f"Correct answer was '{game_response} "
+                  f"Let's try again, {username}!")
             break
         if attempt == ATTEMPTS - 1:
             print(f'Congratulations, {username}!')
-
-
-def greet():
-    print()
-    print("Welcome to the Brain Games!")
-
-
-def check_response(name_player, actual_response, expected_response):
-    if actual_response == expected_response:
-        return 'Correct!', True
-    return f"'{actual_response}' is wrong answer " \
-        f";(. Correct answer was '{expected_response}'. " \
-           f"Let's try again, {name_player}!", False
